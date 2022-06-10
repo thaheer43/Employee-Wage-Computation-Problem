@@ -3,16 +3,24 @@ package com.employeewage.www;
 import java.util.Random;
 
 public class EmployeeWage {
+	static int wagePerHour = 20;
+	static int fullDayHours = 8;
+	static int partTimeHours = 4;
+	static int monthlySalary = 0;
+	static int day = 0;
+	static int monthlyHours = 0;
 
 	public static void main(String[] args) {
 		System.out.println(" Welcome to Employee Wage Computation Program ");
-		int wagePerHour = 20;
-		int fullDayHours = 8;
+
+		empWage();
+		System.out
+				.println(" Day is: " + day + " monthlyHours: " + monthlyHours + " Monthly Salary is: " + monthlySalary);
+	}
+
+
+	public static int empWage() {
 		int wagePerDay = 0;
-		int partTimeHours = 4;
-		int monthlySalary = 0;
-		int day = 0;
-		int monthlyHours = 0;
 
 		while (monthlyHours != 100 && day != 20) {
 			day++;
@@ -37,9 +45,8 @@ public class EmployeeWage {
 
 			}
 			monthlySalary = monthlySalary + wagePerDay;
-			System.out.println(
-					" Day is: " + day + " monthlyHours: " + monthlyHours + " Monthly Salary is: " + monthlySalary);
-		}
 
+		}
+		return monthlySalary;
 	}
 }
